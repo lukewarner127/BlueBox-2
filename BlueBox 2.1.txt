@@ -1,0 +1,11 @@
+BlueBox Version 2.1
+Items to change
+- UART interface connected wrong; swap tx/rx at ESP32 end
+- Add heat relief to all GND pads: revert to default
+- Add "+ -" symbols to battery connector
+- Move battery connector to corner, rotate 90 degrees
+- Add analog input to read battery voltage
+- Add BMS controller for charging
+- Add troubleshooting headers/pads?
+- Add an on/off switch (or button?)
+- 
