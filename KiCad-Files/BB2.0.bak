@@ -1,0 +1,1099 @@
+EESchema Schematic File Version 4
+LIBS:BB2.0-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "BB2 - BlueBox 2"
+Date "11/07/19"
+Rev "1.0"
+Comp "UWA SHL"
+Comment1 "Luke Warner"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Power_Protection:SP0503BAHT D3
+U 1 1 5D2424B0
+P 2200 6800
+F 0 "D3" H 2405 6846 50  0000 L CNN
+F 1 "SP0503BAHT" H 2405 6755 50  0000 L CNN
+F 2 "myfootprint:SOT-143-4_SP0503BAHT" H 2425 6750 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 2325 6925 50  0001 C CNN
+	1    2200 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5D2426D3
+P 1550 7050
+F 0 "#PWR021" H 1550 6800 50  0001 C CNN
+F 1 "GND" H 1555 6877 50  0000 C CNN
+F 2 "" H 1550 7050 50  0001 C CNN
+F 3 "" H 1550 7050 50  0001 C CNN
+	1    1550 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5D2426FD
+P 2200 7000
+F 0 "#PWR020" H 2200 6750 50  0001 C CNN
+F 1 "GND" H 2205 6827 50  0000 C CNN
+F 2 "" H 2200 7000 50  0001 C CNN
+F 3 "" H 2200 7000 50  0001 C CNN
+	1    2200 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 2900 6150 2    50   Input ~ 0
+VBUS
+Text GLabel 2900 6350 2    50   Input ~ 0
+USB_DP
+Text GLabel 2900 6250 2    50   Input ~ 0
+USB_DN
+$Comp
+L Interface_USB:CP2102N-A01-GQFN24 U3
+U 1 1 5D258E9B
+P 4850 6350
+F 0 "U3" H 5100 7200 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN24" H 4250 5500 50  0000 C CNN
+F 2 "myfootprint:QFN-24-1EP_4x4mm_CP2102N" H 5300 5550 50  0001 L CNN
+F 3 "http://www.silabs.com/support%20documents/technicaldocs/cp2102n-datasheet.pdf" H 4900 5300 50  0001 C CNN
+	1    4850 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5D259065
+P 5650 5450
+F 0 "C11" H 5765 5496 50  0000 L CNN
+F 1 "100n" H 5765 5405 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 5688 5300 50  0001 C CNN
+F 3 "~" H 5650 5450 50  0001 C CNN
+	1    5650 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5D2590CD
+P 6050 5450
+F 0 "C12" H 6165 5496 50  0000 L CNN
+F 1 "10u" H 6165 5405 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 6088 5300 50  0001 C CNN
+F 3 "~" H 6050 5450 50  0001 C CNN
+	1    6050 5450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4150 6750 0    50   Input ~ 0
+USB_DP
+Text GLabel 4150 6850 0    50   Input ~ 0
+USB_DN
+Text GLabel 4150 6650 0    50   Input ~ 0
+VBUS
+$Comp
+L power:GND #PWR017
+U 1 1 5D2597CB
+P 5650 5650
+F 0 "#PWR017" H 5650 5400 50  0001 C CNN
+F 1 "GND" H 5655 5477 50  0000 C CNN
+F 2 "" H 5650 5650 50  0001 C CNN
+F 3 "" H 5650 5650 50  0001 C CNN
+	1    5650 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5D2597E4
+P 6050 5650
+F 0 "#PWR018" H 6050 5400 50  0001 C CNN
+F 1 "GND" H 6055 5477 50  0000 C CNN
+F 2 "" H 6050 5650 50  0001 C CNN
+F 3 "" H 6050 5650 50  0001 C CNN
+	1    6050 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5D25A294
+P 4950 7350
+F 0 "#PWR022" H 4950 7100 50  0001 C CNN
+F 1 "GND" H 4955 7177 50  0000 C CNN
+F 2 "" H 4950 7350 50  0001 C CNN
+F 3 "" H 4950 7350 50  0001 C CNN
+	1    4950 7350
+	1    0    0    -1  
+$EndComp
+Text GLabel 6150 5250 2    50   Input ~ 0
+VDD3V3
+Wire Wire Line
+	4850 7250 4850 7300
+Wire Wire Line
+	4850 7300 4950 7300
+Wire Wire Line
+	4950 7300 4950 7250
+Wire Wire Line
+	4950 7300 4950 7350
+Connection ~ 4950 7300
+Wire Wire Line
+	5650 5250 5650 5300
+Wire Wire Line
+	6050 5300 6050 5250
+Wire Wire Line
+	6050 5250 5650 5250
+$Comp
+L Device:R R7
+U 1 1 5D25B6ED
+P 4100 6050
+F 0 "R7" H 4170 6096 50  0000 L CNN
+F 1 "2k" H 4170 6005 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 4030 6050 50  0001 C CNN
+F 3 "~" H 4100 6050 50  0001 C CNN
+	1    4100 6050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 5250 6150 5250
+Connection ~ 6050 5250
+Wire Wire Line
+	5650 5600 5650 5650
+Wire Wire Line
+	6050 5600 6050 5650
+Text GLabel 5550 5950 2    50   Input ~ 0
+RTS
+Text GLabel 5550 6050 2    50   Input ~ 0
+RXD
+Text GLabel 5550 6150 2    50   Input ~ 0
+TXD
+Text GLabel 5550 6350 2    50   Input ~ 0
+DTR
+Wire Wire Line
+	5450 5950 5550 5950
+Wire Wire Line
+	5450 6050 5550 6050
+Wire Wire Line
+	5450 6150 5550 6150
+Wire Wire Line
+	5450 6350 5550 6350
+Text GLabel 4000 6350 0    50   Input ~ 0
+VDD3V3
+Wire Wire Line
+	4150 6650 4250 6650
+Wire Wire Line
+	4150 6750 4250 6750
+Wire Wire Line
+	4150 6850 4250 6850
+Wire Wire Line
+	4100 5750 4250 5750
+Wire Wire Line
+	4000 6350 4100 6350
+Wire Wire Line
+	4100 5750 4100 5900
+Wire Wire Line
+	4100 6200 4100 6350
+Connection ~ 4100 6350
+Wire Wire Line
+	4100 6350 4250 6350
+$Comp
+L Transistor_FET:BSS83P Q1
+U 1 1 5D267290
+P 2900 1300
+F 0 "Q1" H 3105 1346 50  0000 L CNN
+F 1 "DMP3099L" H 3105 1255 50  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 3100 1225 50  0001 L CIN
+F 3 "http://www.farnell.com/datasheets/1835997.pdf" H 2900 1300 50  0001 L CNN
+	1    2900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q2
+U 1 1 5D2674B3
+P 3050 3800
+F 0 "Q2" H 3241 3846 50  0000 L CNN
+F 1 "MMSS8050-H" H 3241 3755 50  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 3250 3725 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 3050 3800 50  0001 L CNN
+	1    3050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q3
+U 1 1 5D26757B
+P 3000 4300
+F 0 "Q3" H 3191 4254 50  0000 L CNN
+F 1 "MMSS8050-H" H 3191 4345 50  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 3200 4225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 3000 4300 50  0001 L CNN
+	1    3000 4300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D267714
+P 2300 2050
+F 0 "R4" H 2370 2096 50  0000 L CNN
+F 1 "100k" H 2370 2005 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 2230 2050 50  0001 C CNN
+F 3 "~" H 2300 2050 50  0001 C CNN
+	1    2300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT48JFILM D1
+U 1 1 5D269DAA
+P 2650 1700
+F 0 "D1" H 2650 1484 50  0000 C CNN
+F 1 "BAT760Q" H 2650 1575 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 2650 1525 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/bat48.pdf" H 2650 1700 50  0001 C CNN
+	1    2650 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 1700 3000 1700
+Connection ~ 3000 1700
+Wire Wire Line
+	2500 1700 2300 1700
+Wire Wire Line
+	2300 1700 2300 1900
+Wire Wire Line
+	2300 2200 2300 2250
+$Comp
+L power:GND #PWR012
+U 1 1 5D26B6D4
+P 2300 2250
+F 0 "#PWR012" H 2300 2000 50  0001 C CNN
+F 1 "GND" H 2305 2077 50  0000 C CNN
+F 2 "" H 2300 2250 50  0001 C CNN
+F 3 "" H 2300 2250 50  0001 C CNN
+	1    2300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1300 2700 1300
+Wire Wire Line
+	3000 1100 3000 1050
+Text GLabel 2200 1300 0    50   Input ~ 0
+VBUS
+Text GLabel 3000 1050 1    50   Input ~ 0
+VBAT
+$Comp
+L Device:R R5
+U 1 1 5D26E86C
+P 2450 3800
+F 0 "R5" H 2520 3846 50  0000 L CNN
+F 1 "10k" H 2520 3755 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 2380 3800 50  0001 C CNN
+F 3 "~" H 2450 3800 50  0001 C CNN
+	1    2450 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D2708A0
+P 2450 4300
+F 0 "R6" H 2520 4346 50  0000 L CNN
+F 1 "10k" H 2520 4255 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 2380 4300 50  0001 C CNN
+F 3 "~" H 2450 4300 50  0001 C CNN
+	1    2450 4300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3550 3550 2    50   Input ~ 0
+EN
+Text GLabel 3550 4550 2    50   Input ~ 0
+IO0
+Text GLabel 1950 3800 0    50   Input ~ 0
+DTR
+Text GLabel 1950 4300 0    50   Input ~ 0
+RTS
+Wire Wire Line
+	1950 3800 2200 3800
+Wire Wire Line
+	3150 3600 3150 3550
+Wire Wire Line
+	2200 4000 2200 3800
+Connection ~ 2200 3800
+Wire Wire Line
+	2200 3800 2300 3800
+Wire Wire Line
+	1950 4300 2200 4300
+Wire Wire Line
+	3150 4050 3150 4000
+Wire Wire Line
+	2200 4050 2200 4300
+Connection ~ 2200 4300
+Wire Wire Line
+	2200 4300 2300 4300
+Wire Wire Line
+	3100 4000 3100 4100
+Wire Wire Line
+	3550 4550 3100 4550
+Wire Wire Line
+	3100 4550 3100 4500
+Wire Wire Line
+	3150 3550 3550 3550
+Wire Wire Line
+	4750 5400 4850 5400
+Wire Wire Line
+	4750 5400 4750 5450
+Wire Wire Line
+	4850 5400 4850 5450
+$Comp
+L Device:C C7
+U 1 1 5D28D64A
+P 4750 2350
+F 0 "C7" H 4865 2396 50  0000 L CNN
+F 1 "1n" H 4865 2305 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 4788 2200 50  0001 C CNN
+F 3 "~" H 4750 2350 50  0001 C CNN
+	1    4750 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D28D70E
+P 3000 2050
+F 0 "C3" H 3115 2096 50  0000 L CNN
+F 1 "22u" H 3115 2005 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 3038 1900 50  0001 C CNN
+F 3 "~" H 3000 2050 50  0001 C CNN
+	1    3000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5D28D88A
+P 5400 1900
+F 0 "C4" H 5515 1946 50  0000 L CNN
+F 1 "22u" H 5515 1855 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 5438 1750 50  0001 C CNN
+F 3 "~" H 5400 1900 50  0001 C CNN
+	1    5400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5D28D8F0
+P 5750 1900
+F 0 "C5" H 5865 1946 50  0000 L CNN
+F 1 "22u" H 5865 1855 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 5788 1750 50  0001 C CNN
+F 3 "~" H 5750 1900 50  0001 C CNN
+	1    5750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D28D971
+P 4950 1900
+F 0 "R2" H 5020 1946 50  0000 L CNN
+F 1 "1M" H 5020 1855 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 4880 1900 50  0001 C CNN
+F 3 "~" H 4950 1900 50  0001 C CNN
+	1    4950 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5D28DB62
+P 4200 1250
+F 0 "L1" H 4253 1296 50  0000 L CNN
+F 1 "1.5u" H 4253 1205 50  0000 L CNN
+F 2 "myfootprint:Murata_Inductor" H 4200 1250 50  0001 C CNN
+F 3 "~" H 4200 1250 50  0001 C CNN
+	1    4200 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D28DE2A
+P 7100 1750
+F 0 "R3" H 7170 1796 50  0000 L CNN
+F 1 "2k" H 7170 1705 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 7030 1750 50  0001 C CNN
+F 3 "~" H 7100 1750 50  0001 C CNN
+	1    7100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT D2
+U 1 1 5D28DF88
+P 7100 2150
+F 0 "D2" V 7138 2032 50  0000 R CNN
+F 1 "LED_RED" V 7047 2032 50  0000 R CNN
+F 2 "digikey-footprints:LED_0603" H 7100 2150 50  0001 C CNN
+F 3 "~" H 7100 2150 50  0001 C CNN
+	1    7100 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7100 1450 7100 1600
+Wire Wire Line
+	7100 1900 7100 2000
+$Comp
+L power:GND #PWR010
+U 1 1 5D291DA5
+P 7100 2450
+F 0 "#PWR010" H 7100 2200 50  0001 C CNN
+F 1 "GND" H 7105 2277 50  0000 C CNN
+F 2 "" H 7100 2450 50  0001 C CNN
+F 3 "" H 7100 2450 50  0001 C CNN
+	1    7100 2450
+	1    0    0    -1  
+$EndComp
+Text GLabel 7100 1450 1    50   Input ~ 0
+LED
+$Comp
+L Device:R R1
+U 1 1 5D29687A
+P 7700 1700
+F 0 "R1" H 7770 1746 50  0000 L CNN
+F 1 "10k" H 7770 1655 50  0000 L CNN
+F 2 "digikey-footprints:0603" V 7630 1700 50  0001 C CNN
+F 3 "~" H 7700 1700 50  0001 C CNN
+	1    7700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5D296A52
+P 7700 2200
+F 0 "C8" H 7815 2246 50  0000 L CNN
+F 1 "100n" H 7815 2155 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 7738 2050 50  0001 C CNN
+F 3 "~" H 7700 2200 50  0001 C CNN
+	1    7700 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1550 7700 1450
+Wire Wire Line
+	7700 1850 7700 1950
+Wire Wire Line
+	7700 2350 7700 2450
+$Comp
+L power:GND #PWR011
+U 1 1 5D29D8C4
+P 7700 2450
+F 0 "#PWR011" H 7700 2200 50  0001 C CNN
+F 1 "GND" H 7705 2277 50  0000 C CNN
+F 2 "" H 7700 2450 50  0001 C CNN
+F 3 "" H 7700 2450 50  0001 C CNN
+	1    7700 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1950 7900 1950
+Connection ~ 7700 1950
+Wire Wire Line
+	7700 1950 7700 2050
+Text GLabel 7700 1450 1    50   Input ~ 0
+VDD3V3
+Text GLabel 7900 1950 2    50   Input ~ 0
+EN
+$Comp
+L dk_RF-Transceiver-Modules:ESP32-WROOM-32 MOD1
+U 1 1 5D2BA9BF
+P 9100 1100
+F 0 "MOD1" H 9700 1200 60  0000 C CNN
+F 1 "ESP32-WROOM-32" H 8550 -1000 60  0000 C CNN
+F 2 "digikey-footprints:ESP32-WROOM-32D" H 9300 1300 60  0001 L CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 9300 1400 60  0001 L CNN
+F 4 "1904-1010-1-ND" H 9300 1500 60  0001 L CNN "Digi-Key_PN"
+F 5 "ESP32-WROOM-32" H 9300 1600 60  0001 L CNN "MPN"
+F 6 "RF/IF and RFID" H 9300 1700 60  0001 L CNN "Category"
+F 7 "RF Transceiver Modules" H 9300 1800 60  0001 L CNN "Family"
+F 8 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 9300 1900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/espressif-systems/ESP32-WROOM-32/1904-1010-1-ND/8544305" H 9300 2000 60  0001 L CNN "DK_Detail_Page"
+F 10 "SMD MODULE, ESP32-D0WDQ6, 32MBIT" H 9300 2100 60  0001 L CNN "Description"
+F 11 "Espressif Systems" H 9300 2200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9300 2300 60  0001 L CNN "Status"
+	1    9100 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 1200 0    50   Input ~ 0
+EN
+Wire Wire Line
+	9100 3200 9100 3250
+Wire Wire Line
+	9100 3250 9200 3250
+Wire Wire Line
+	9400 3250 9400 3200
+Wire Wire Line
+	9300 3200 9300 3250
+Connection ~ 9300 3250
+Wire Wire Line
+	9300 3250 9400 3250
+Wire Wire Line
+	9200 3200 9200 3250
+Connection ~ 9200 3250
+Wire Wire Line
+	9200 3250 9300 3250
+Wire Wire Line
+	9200 3250 9200 3300
+$Comp
+L power:GND #PWR014
+U 1 1 5D27371D
+P 9200 3300
+F 0 "#PWR014" H 9200 3050 50  0001 C CNN
+F 1 "GND" H 9205 3127 50  0000 C CNN
+F 2 "" H 9200 3300 50  0001 C CNN
+F 3 "" H 9200 3300 50  0001 C CNN
+	1    9200 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 2300 0    50   Input ~ 0
+SCL
+Text GLabel 8500 2400 0    50   Input ~ 0
+MISO
+Text GLabel 8500 2500 0    50   Input ~ 0
+CS
+Text GLabel 8500 2700 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	8500 1200 8600 1200
+Wire Wire Line
+	4750 5400 4750 5250
+Wire Wire Line
+	4750 5250 5650 5250
+Connection ~ 4750 5400
+Connection ~ 5650 5250
+Wire Wire Line
+	2600 3800 2850 3800
+Wire Wire Line
+	2200 4000 3100 4000
+Wire Wire Line
+	3150 4050 2200 4050
+Wire Wire Line
+	2600 4300 2800 4300
+$Comp
+L dk_USB-DVI-HDMI-Connectors:10118194-0001LF J2
+U 1 1 5D29A0B0
+P 1200 6350
+F 0 "J2" H 1263 7095 60  0000 C CNN
+F 1 "10118194-0001LF" H 1263 6989 60  0000 C CNN
+F 2 "digikey-footprints:USB_Micro_B_Female_10118194-0001LF" H 1400 6550 60  0001 L CNN
+F 3 "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" H 1400 6650 60  0001 L CNN
+F 4 "609-4618-1-ND" H 1400 6750 60  0001 L CNN "Digi-Key_PN"
+F 5 "10118194-0001LF" H 1400 6850 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1400 6950 60  0001 L CNN "Category"
+F 7 "USB, DVI, HDMI Connectors" H 1400 7050 60  0001 L CNN "Family"
+F 8 "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf" H 1400 7150 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/amphenol-icc-fci/10118194-0001LF/609-4618-1-ND/2785382" H 1400 7250 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN RCPT USB2.0 MICRO B SMD R/A" H 1400 7350 60  0001 L CNN "Description"
+F 11 "Amphenol ICC (FCI)" H 1400 7450 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1400 7550 60  0001 L CNN "Status"
+	1    1200 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 7000 1100 6950
+Wire Wire Line
+	1500 6550 1550 6550
+Wire Wire Line
+	1550 6550 1550 7000
+Connection ~ 1550 7000
+Wire Wire Line
+	1550 7000 1550 7050
+Wire Wire Line
+	1100 7000 1550 7000
+$Comp
+L Device:C C1
+U 1 1 5D2CC5B6
+P 10200 950
+F 0 "C1" H 10315 996 50  0000 L CNN
+F 1 "100n" H 10315 905 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 10238 800 50  0001 C CNN
+F 3 "~" H 10200 950 50  0001 C CNN
+	1    10200 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D2CC5BD
+P 10600 950
+F 0 "C2" H 10715 996 50  0000 L CNN
+F 1 "10u" H 10715 905 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 10638 800 50  0001 C CNN
+F 3 "~" H 10600 950 50  0001 C CNN
+	1    10600 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D2CC5C4
+P 10200 1150
+F 0 "#PWR02" H 10200 900 50  0001 C CNN
+F 1 "GND" H 10205 977 50  0000 C CNN
+F 2 "" H 10200 1150 50  0001 C CNN
+F 3 "" H 10200 1150 50  0001 C CNN
+	1    10200 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5D2CC5CA
+P 10600 1150
+F 0 "#PWR03" H 10600 900 50  0001 C CNN
+F 1 "GND" H 10605 977 50  0000 C CNN
+F 2 "" H 10600 1150 50  0001 C CNN
+F 3 "" H 10600 1150 50  0001 C CNN
+	1    10600 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 10700 750  2    50   Input ~ 0
+VDD3V3
+Wire Wire Line
+	10200 750  10200 800 
+Wire Wire Line
+	10600 800  10600 750 
+Wire Wire Line
+	10600 750  10200 750 
+Wire Wire Line
+	10600 750  10700 750 
+Connection ~ 10600 750 
+Wire Wire Line
+	10200 1100 10200 1150
+Wire Wire Line
+	10600 1100 10600 1150
+Wire Wire Line
+	9300 750  10200 750 
+Connection ~ 10200 750 
+Wire Wire Line
+	9300 750  9300 1000
+Wire Wire Line
+	8500 2300 8600 2300
+Wire Wire Line
+	8500 2400 8600 2400
+Wire Wire Line
+	8500 2500 8600 2500
+Wire Wire Line
+	8500 2700 8600 2700
+Wire Wire Line
+	8600 1400 8500 1400
+Text GLabel 8500 1400 0    50   Input ~ 0
+LED
+Wire Wire Line
+	10000 2500 10100 2500
+Text GLabel 10100 2500 2    50   Input ~ 0
+INT1
+Wire Wire Line
+	7100 2300 7100 2450
+Text GLabel 8500 2800 0    50   Input ~ 0
+INT2
+Wire Wire Line
+	8500 2800 8600 2800
+Text GLabel 8500 1300 0    50   Input ~ 0
+IO0
+Wire Wire Line
+	8500 1300 8600 1300
+Text GLabel 10100 2100 2    50   Input ~ 0
+RXD
+Text GLabel 10100 2000 2    50   Input ~ 0
+TXD
+Wire Wire Line
+	10000 2000 10100 2000
+Wire Wire Line
+	10000 2100 10100 2100
+Text Notes 4600 4350 0    50   ~ 0
+AUTO PROGRAM\nDTR   RTS <-> EN   IO0\n 1     1    |    1     1\n 0     0    |    1     1\n 1     0    |    0     1\n 0     1    |    1     0
+$Comp
+L My_Library:ISM330DLC U2
+U 1 1 5D30C577
+P 9200 5200
+F 0 "U2" H 9500 5800 50  0000 C CNN
+F 1 "ISM330DLC" H 8750 4600 50  0000 C CNN
+F 2 "digikey-footprints:LGA-14L_2.5x3mm__LSM6DS3" H 9300 5200 50  0001 C CNN
+F 3 "" H 9300 5200 50  0001 C CNN
+	1    9200 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 5850 9150 5900
+Wire Wire Line
+	9150 5900 9250 5900
+Wire Wire Line
+	9250 5900 9250 5850
+Wire Wire Line
+	9250 5950 9250 5900
+Connection ~ 9250 5900
+$Comp
+L power:GND #PWR019
+U 1 1 5D312446
+P 9250 5950
+F 0 "#PWR019" H 9250 5700 50  0001 C CNN
+F 1 "GND" H 9255 5777 50  0000 C CNN
+F 2 "" H 9250 5950 50  0001 C CNN
+F 3 "" H 9250 5950 50  0001 C CNN
+	1    9250 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5150 8550 5150
+Wire Wire Line
+	8650 5250 8550 5250
+Text GLabel 8550 5250 0    50   Input ~ 0
+INT2
+Text GLabel 8550 5150 0    50   Input ~ 0
+INT1
+Text GLabel 9750 5050 2    50   Input ~ 0
+MISO
+Text GLabel 9750 5150 2    50   Input ~ 0
+MOSI
+Text GLabel 9750 5250 2    50   Input ~ 0
+SCL
+Text GLabel 9750 5350 2    50   Input ~ 0
+CS
+$Comp
+L Device:C C9
+U 1 1 5D3255BC
+P 8750 4100
+F 0 "C9" H 8865 4146 50  0000 L CNN
+F 1 "100n" H 8865 4055 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 8788 3950 50  0001 C CNN
+F 3 "~" H 8750 4100 50  0001 C CNN
+	1    8750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5D3288A1
+P 8750 4300
+F 0 "#PWR016" H 8750 4050 50  0001 C CNN
+F 1 "GND" H 8755 4127 50  0000 C CNN
+F 2 "" H 8750 4300 50  0001 C CNN
+F 3 "" H 8750 4300 50  0001 C CNN
+	1    8750 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3950 8750 3900
+$Comp
+L Device:C C10
+U 1 1 5D332323
+P 9500 4100
+F 0 "C10" H 9615 4146 50  0000 L CNN
+F 1 "100n" H 9615 4055 50  0000 L CNN
+F 2 "digikey-footprints:0603" H 9538 3950 50  0001 C CNN
+F 3 "~" H 9500 4100 50  0001 C CNN
+	1    9500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5D335934
+P 9500 4250
+F 0 "#PWR015" H 9500 4000 50  0001 C CNN
+F 1 "GND" H 9505 4077 50  0000 C CNN
+F 2 "" H 9500 4250 50  0001 C CNN
+F 3 "" H 9500 4250 50  0001 C CNN
+	1    9500 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 8750 3900 0    50   Input ~ 0
+VDD3V3
+Text GLabel 9500 3900 2    50   Input ~ 0
+VDDIO
+Text GLabel 8550 4950 0    50   Input ~ 0
+VDDIO
+Text GLabel 8550 5050 0    50   Input ~ 0
+VDDIO
+Wire Wire Line
+	8550 4950 8650 4950
+Wire Wire Line
+	8550 5050 8650 5050
+Wire Wire Line
+	8750 4250 8750 4300
+Wire Wire Line
+	8750 3900 9150 3900
+Wire Wire Line
+	9250 3900 9500 3900
+Wire Wire Line
+	9500 3900 9500 3950
+Wire Wire Line
+	9150 3900 9150 4550
+Wire Wire Line
+	9250 3900 9250 4550
+$Comp
+L My_Library:TPS63051 U1
+U 1 1 5D366466
+P 4200 1850
+F 0 "U1" H 4200 2300 50  0000 C CNN
+F 1 "TPS63051" H 4200 1400 50  0000 C CNN
+F 2 "digikey-footprints:VQFN-12_2.5x2.5mm" H 4100 2450 50  0001 C CNN
+F 3 "" H 4200 1850 50  0001 C CNN
+	1    4200 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2100 4750 2100
+Wire Wire Line
+	4750 2100 4750 2200
+Wire Wire Line
+	4750 2500 4750 2550
+$Comp
+L power:GND #PWR08
+U 1 1 5D381D20
+P 4750 2550
+F 0 "#PWR08" H 4750 2300 50  0001 C CNN
+F 1 "GND" H 4755 2377 50  0000 C CNN
+F 2 "" H 4750 2550 50  0001 C CNN
+F 3 "" H 4750 2550 50  0001 C CNN
+	1    4750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5D381D69
+P 3650 2550
+F 0 "#PWR07" H 3650 2300 50  0001 C CNN
+F 1 "GND" H 3655 2377 50  0000 C CNN
+F 2 "" H 3650 2550 50  0001 C CNN
+F 3 "" H 3650 2550 50  0001 C CNN
+	1    3650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2000 5000 2000
+Wire Wire Line
+	5000 2000 5000 2550
+$Comp
+L power:GND #PWR09
+U 1 1 5D38A615
+P 5000 2550
+F 0 "#PWR09" H 5000 2300 50  0001 C CNN
+F 1 "GND" H 5005 2377 50  0000 C CNN
+F 2 "" H 5000 2550 50  0001 C CNN
+F 3 "" H 5000 2550 50  0001 C CNN
+	1    5000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1800 4750 1800
+Wire Wire Line
+	4750 1800 4750 1700
+Wire Wire Line
+	4750 1700 4650 1700
+Wire Wire Line
+	4750 1700 5200 1700
+Connection ~ 4750 1700
+Wire Wire Line
+	3750 1700 3650 1700
+Wire Wire Line
+	3750 1800 3650 1800
+Wire Wire Line
+	3650 1800 3650 1700
+Wire Wire Line
+	3650 2100 3650 2550
+Wire Wire Line
+	3650 2100 3750 2100
+Wire Wire Line
+	3650 1600 3650 1250
+Wire Wire Line
+	4750 1600 4750 1250
+Wire Wire Line
+	3650 1250 4050 1250
+Wire Wire Line
+	3650 1600 3750 1600
+Wire Wire Line
+	4350 1250 4750 1250
+Wire Wire Line
+	4650 1600 4750 1600
+Wire Wire Line
+	4800 1900 4650 1900
+Wire Wire Line
+	5100 1900 5200 1900
+Wire Wire Line
+	5200 1900 5200 1700
+Connection ~ 5200 1700
+Wire Wire Line
+	5400 2050 5400 2100
+Wire Wire Line
+	5750 2050 5750 2100
+$Comp
+L power:GND #PWR05
+U 1 1 5D3DCF3F
+P 5400 2100
+F 0 "#PWR05" H 5400 1850 50  0001 C CNN
+F 1 "GND" H 5405 1927 50  0000 C CNN
+F 2 "" H 5400 2100 50  0001 C CNN
+F 3 "" H 5400 2100 50  0001 C CNN
+	1    5400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5D3DCF88
+P 5750 2100
+F 0 "#PWR06" H 5750 1850 50  0001 C CNN
+F 1 "GND" H 5755 1927 50  0000 C CNN
+F 2 "" H 5750 2100 50  0001 C CNN
+F 3 "" H 5750 2100 50  0001 C CNN
+	1    5750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D3DCFD1
+P 3000 2250
+F 0 "#PWR04" H 3000 2000 50  0001 C CNN
+F 1 "GND" H 3005 2077 50  0000 C CNN
+F 2 "" H 3000 2250 50  0001 C CNN
+F 3 "" H 3000 2250 50  0001 C CNN
+	1    3000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2200 3000 2250
+Wire Wire Line
+	5200 1700 5400 1700
+Wire Wire Line
+	5400 1700 5400 1750
+Connection ~ 5400 1700
+Wire Wire Line
+	5400 1700 5750 1700
+Wire Wire Line
+	5750 1700 5750 1750
+Connection ~ 5750 1700
+Wire Wire Line
+	5750 1700 6000 1700
+Text GLabel 6000 1700 2    50   Input ~ 0
+VDD3V3
+Wire Wire Line
+	3750 2000 3650 2000
+Wire Wire Line
+	3650 2000 3650 2100
+Connection ~ 3650 2100
+Wire Wire Line
+	3750 1900 3650 1900
+Wire Wire Line
+	3650 1900 3650 1800
+Connection ~ 3650 1800
+Wire Notes Line
+	600  3200 6600 3200
+Wire Notes Line
+	6600 600  600  600 
+Wire Notes Line
+	6700 600  6700 3600
+Wire Notes Line
+	6700 3600 11100 3600
+Wire Notes Line
+	11100 3600 11100 600 
+Wire Notes Line
+	11100 600  6700 600 
+Wire Notes Line
+	6700 3700 6700 6400
+Wire Notes Line
+	6700 6400 11100 6400
+Wire Notes Line
+	11100 6400 11100 3700
+Wire Notes Line
+	11100 3700 6700 3700
+Wire Notes Line
+	6600 5000 600  5000
+Wire Notes Line
+	600  7700 6600 7700
+Wire Notes Line
+	600  3300 6600 3300
+Wire Notes Line
+	6600 4900 600  4900
+Text Notes 7100 3500 2    100  ~ 0
+CPU
+Text Notes 7100 6300 2    100  ~ 0
+IMU
+Text Notes 2400 7600 2    100  ~ 0
+USB-UART INTERFACE
+Text Notes 1900 4800 2    100  ~ 0
+AUTO PROGRAM
+Text Notes 3600 3100 2    100  ~ 0
+POWER CONVERSION AND SWITCHOVER
+$Comp
+L dk_Rectangular-Connectors-Headers-Male-Pins:S2B-PH-K-S_LF__SN_ J1
+U 1 1 5D492D27
+P 1300 2000
+F 0 "J1" V 1075 2006 50  0000 C CNN
+F 1 "JST-2PIN-CONN" V 1166 2006 50  0000 C CNN
+F 2 "myfootprint:JST-2-PIN-PH-CONN" H 1500 2200 60  0001 L CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf" H 1500 2300 60  0001 L CNN
+F 4 "455-1719-ND" H 1500 2400 60  0001 L CNN "Digi-Key_PN"
+F 5 "S2B-PH-K-S(LF)(SN)" H 1500 2500 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1500 2600 60  0001 L CNN "Category"
+F 7 "Rectangular Connectors - Headers, Male Pins" H 1500 2700 60  0001 L CNN "Family"
+F 8 "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf" H 1500 2800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/jst-sales-america-inc/S2B-PH-K-S(LF)(SN)/455-1719-ND/926626" H 1500 2900 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN HEADER R/A 2POS 2MM" H 1500 3000 60  0001 L CNN "Description"
+F 11 "JST Sales America Inc." H 1500 3100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1500 3200 60  0001 L CNN "Status"
+	1    1300 2000
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	6600 600  6600 3200
+Wire Notes Line
+	600  600  600  3200
+Wire Wire Line
+	1400 2000 1500 2000
+Wire Wire Line
+	1400 2100 1500 2100
+Wire Wire Line
+	1500 2100 1500 2200
+$Comp
+L power:GND #PWR01
+U 1 1 5D510C0C
+P 1500 2200
+F 0 "#PWR01" H 1500 1950 50  0001 C CNN
+F 1 "GND" H 1505 2027 50  0000 C CNN
+F 2 "" H 1500 2200 50  0001 C CNN
+F 3 "" H 1500 2200 50  0001 C CNN
+	1    1500 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 2000 2    50   Input ~ 0
+VBAT
+Wire Wire Line
+	2200 1300 2300 1300
+Connection ~ 2300 1300
+Wire Notes Line
+	6600 5000 6600 7700
+Wire Notes Line
+	6600 4900 6600 3300
+Wire Notes Line
+	600  3300 600  4900
+Wire Notes Line
+	600  5000 600  7700
+Wire Wire Line
+	3000 1700 3000 1900
+Wire Wire Line
+	3000 1700 3650 1700
+Connection ~ 3650 1700
+Wire Wire Line
+	2300 1300 2300 1700
+Connection ~ 2300 1700
+Wire Wire Line
+	3000 1500 3000 1700
+Wire Wire Line
+	1500 6150 2300 6150
+Wire Wire Line
+	2300 6600 2300 6350
+Wire Wire Line
+	1500 6250 2100 6250
+Connection ~ 2300 6150
+Wire Wire Line
+	2300 6150 2900 6150
+Wire Wire Line
+	2300 6350 2300 6150
+Wire Wire Line
+	1500 6350 2200 6350
+Wire Wire Line
+	2100 6600 2100 6250
+Connection ~ 2100 6250
+Wire Wire Line
+	2100 6250 2900 6250
+Wire Wire Line
+	2200 6350 2200 6600
+Connection ~ 2200 6350
+Wire Wire Line
+	2200 6350 2900 6350
+$EndSCHEMATC
